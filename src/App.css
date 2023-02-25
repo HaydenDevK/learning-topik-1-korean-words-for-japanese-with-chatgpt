@@ -40,7 +40,7 @@
 }
 
 .Table-wrapper {
-  overflow-x: auto;
+  overflow: auto;
 }
 
 table {

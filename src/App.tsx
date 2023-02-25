@@ -6,11 +6,12 @@ interface TableData {
   translation: string;
   pronunciationEng: string;
   pronunciationJpn: string;
-  example: {
+  examples: {
     korean: string;
+    translation: string;
     pronunciationEng: string;
     pronunciationJpn: string;
-  };
+  }[];
   isChecked: boolean;
 }
 
@@ -20,11 +21,14 @@ const data: TableData[] = [
     translation: "猫",
     pronunciationEng: "goyang-i",
     pronunciationJpn: "ゴヤンイ",
-    example: {
-      korean: "제 친구는 고양이를 키워요.",
-      pronunciationEng: "je chinguneun goyang-ireul kiwoyo",
-      pronunciationJpn: "チングヌン ゴヤンイル キウォヨ",
-    },
+    examples: [
+      {
+        korean: "제 친구는 고양이를 키워요.",
+        translation: "私の友達は猫を育てています。",
+        pronunciationEng: "je chinguneun goyang-ireul kiwoyo",
+        pronunciationJpn: "チングヌン ゴヤンイル キウォヨ",
+      },
+    ],
     isChecked: false,
   },
   {
@@ -32,11 +36,14 @@ const data: TableData[] = [
     translation: "犬",
     pronunciationEng: "gae",
     pronunciationJpn: "ゲ",
-    example: {
-      korean: "이 동네에는 많은 개가 있어요.",
-      pronunciationEng: "i dongneeneun manheun gaega isseoyo",
-      pronunciationJpn: "イドンネエン マンフン ゲガ イッソヨ",
-    },
+    examples: [
+      {
+        korean: "이 동네에는 많은 개가 있어요.",
+        translation: "この地域にはたくさんの犬がいます。",
+        pronunciationEng: "i dongneeneun manheun gaega isseoyo",
+        pronunciationJpn: "イドンネエン マンフン ゲガ イッソヨ",
+      },
+    ],
     isChecked: false,
   },
   {
@@ -44,11 +51,14 @@ const data: TableData[] = [
     translation: "本",
     pronunciationEng: "chaeg",
     pronunciationJpn: "チェグ",
-    example: {
-      korean: "저는 책을 읽는 것을 좋아해요.",
-      pronunciationEng: "jeoneun chaeg-eul ilgeun geoseul johahaeyo",
-      pronunciationJpn: "ジョヌン チェグウル イルグン ゴスル ジョハヘヨ",
-    },
+    examples: [
+      {
+        korean: "저는 책을 읽는 것을 좋아해요.",
+        translation: "私は本を読むことが好きです。",
+        pronunciationEng: "jeoneun chaeg-eul ilgeun geoseul johahaeyo",
+        pronunciationJpn: "ジョヌン チェグウル イルグン ゴスル ジョハヘヨ",
+      },
+    ],
     isChecked: false,
   },
   {
@@ -56,11 +66,20 @@ const data: TableData[] = [
     translation: "学校",
     pronunciationEng: "hakgyo",
     pronunciationJpn: "ハクギョ",
-    example: {
-      korean: "학교에서 수업을 들어요.",
-      pronunciationEng: "hakgyoeseo sueob-eul deul-eoyo",
-      pronunciationJpn: "ハクギョエソ スオブウル トゥルオヨ",
-    },
+    examples: [
+      {
+        korean: "학교에서 수업을 들어요.",
+        translation: "学校で授業を受けます。",
+        pronunciationEng: "hakgyoeseo sueob-eul deul-eoyo",
+        pronunciationJpn: "ハクギョエソ スオブウル トゥルオヨ",
+      },
+      {
+        korean: "저는 학교에 가요.",
+        translation: "私は学校に行きます。",
+        pronunciationEng: "jeoneun hakgyoe gayo",
+        pronunciationJpn: "ジョヌン ハッキョエ カヨ",
+      },
+    ],
     isChecked: false,
   },
   {
@@ -68,11 +87,14 @@ const data: TableData[] = [
     translation: "食べ物",
     pronunciationEng: "eumsig",
     pronunciationJpn: "ウムシク",
-    example: {
-      korean: "이 음식은 정말 맛있어요.",
-      pronunciationEng: "i eumsigeun jeongmal masisseoyo",
-      pronunciationJpn: "イウムシグン ジョンマル マシッソヨ",
-    },
+    examples: [
+      {
+        korean: "이 음식은 정말 맛있어요.",
+        translation: "この食べ物は本当に美味しいです。",
+        pronunciationEng: "i eumsigeun jeongmal masisseoyo",
+        pronunciationJpn: "イウムシグン ジョンマル マシッソヨ",
+      },
+    ],
     isChecked: false,
   },
   {
@@ -80,11 +102,14 @@ const data: TableData[] = [
     translation: "コーヒー",
     pronunciationEng: "keopi",
     pronunciationJpn: "コーヒ",
-    example: {
-      korean: "아침에 커피를 마셔요.",
-      pronunciationEng: "achime keopileul masyeoyo",
-      pronunciationJpn: "アチメ ケオピル マショヨ",
-    },
+    examples: [
+      {
+        korean: "아침에 커피를 마셔요.",
+        translation: "朝コーヒーを飲みます。",
+        pronunciationEng: "achime keopileul masyeoyo",
+        pronunciationJpn: "アチメ ケオピル マショヨ",
+      },
+    ],
     isChecked: false,
   },
   {
@@ -92,11 +117,14 @@ const data: TableData[] = [
     translation: "林檎",
     pronunciationEng: "sagwa",
     pronunciationJpn: "サグァ",
-    example: {
-      korean: "사과를 먹고 싶어요.",
-      pronunciationEng: "sagwareul meokgo sip-eoyo",
-      pronunciationJpn: "サグァルル モッコ シプエヨ",
-    },
+    examples: [
+      {
+        korean: "사과를 먹고 싶어요.",
+        translation: "りんごを食べたいです。",
+        pronunciationEng: "sagwareul meokgo sip-eoyo",
+        pronunciationJpn: "サグァルル モッコ シプエヨ",
+      },
+    ],
     isChecked: false,
   },
   {
@@ -104,11 +132,14 @@ const data: TableData[] = [
     translation: "バス",
     pronunciationEng: "beoseu",
     pronunciationJpn: "ベオス",
-    example: {
-      korean: "버스를 타러 가요",
-      pronunciationEng: "beoseuleul taleo gayo",
-      pronunciationJpn: "ベオスルル タラオ ガ",
-    },
+    examples: [
+      {
+        korean: "버스를 타러 가요",
+        translation: "バスに乗りに行きます。",
+        pronunciationEng: "beoseuleul taleo gayo",
+        pronunciationJpn: "ベオスルル タラオ ガ",
+      },
+    ],
     isChecked: false,
   },
   {
@@ -116,11 +147,14 @@ const data: TableData[] = [
     translation: "地下鉄",
     pronunciationEng: "jihacheol",
     pronunciationJpn: "ジハチョル",
-    example: {
-      korean: "지하철을 타면 어디에 가요?",
-      pronunciationEng: "jihacheol-eul tamyeon eodie gayo",
-      pronunciationJpn: "ジハチョルウル タミョン オデ ガヨ",
-    },
+    examples: [
+      {
+        korean: "지하철을 타면 어디에 가요?",
+        translation: "地下鉄に乗ったらどこに行きますか？",
+        pronunciationEng: "jihacheol-eul tamyeon eodie gayo",
+        pronunciationJpn: "ジハチョルウル タミョン オデ ガヨ",
+      },
+    ],
     isChecked: false,
   },
   {
@@ -128,23 +162,14 @@ const data: TableData[] = [
     translation: "ボタン",
     pronunciationEng: "beoteun",
     pronunciationJpn: "ボタン",
-    example: {
-      korean: "이 버튼을 누르세요.",
-      pronunciationEng: "i beoteun-eul nuleuseyo",
-      pronunciationJpn: "イ ボタンウル ヌルセヨ",
-    },
-    isChecked: false,
-  },
-  {
-    korean: "사람",
-    translation: "人",
-    pronunciationEng: "saram",
-    pronunciationJpn: "サラム",
-    example: {
-      korean: "이곳에는 사람이 많아요.",
-      pronunciationEng: "igoseneun saram-i manh-ayo",
-      pronunciationJpn: "イゴセヌン サラミ マンハヨ",
-    },
+    examples: [
+      {
+        korean: "이 버튼을 누르세요.",
+        translation: "このボタンを押してください。",
+        pronunciationEng: "i beoteun-eul nuleuseyo",
+        pronunciationJpn: "イ ボタンウル ヌルセヨ",
+      },
+    ],
     isChecked: false,
   },
   {
@@ -152,11 +177,14 @@ const data: TableData[] = [
     translation: "携帯電話",
     pronunciationEng: "haendeupon",
     pronunciationJpn: "ハエンドゥポン",
-    example: {
-      korean: "핸드폰 번호를 알아요?",
-      pronunciationEng: "haendeupon beonholeul al-ayo",
-      pronunciationJpn: "ハエンドゥポン ベオンホルル アラヨ",
-    },
+    examples: [
+      {
+        korean: "핸드폰 번호를 알아요?",
+        translation: "携帯番号を知っていますか？",
+        pronunciationEng: "haendeupon beonholeul al-ayo",
+        pronunciationJpn: "ハエンドゥポン ベオンホルル アラヨ",
+      },
+    ],
     isChecked: false,
   },
   {
@@ -164,11 +192,95 @@ const data: TableData[] = [
     translation: "牛乳",
     pronunciationEng: "uyu",
     pronunciationJpn: "ウユ",
-    example: {
-      korean: "우유를 마셔도 되나요?",
-      pronunciationEng: "uyureul masyeodo doenayo",
-      pronunciationJpn: "ウユルル マショド ウェドナヨ",
-    },
+    examples: [
+      {
+        korean: "우유를 마셔도 되나요?",
+        translation: "牛乳を飲んでもいいですか？",
+        pronunciationEng: "uyureul masyeodo doenayo",
+        pronunciationJpn: "ウユルル マショド ウェドナヨ",
+      },
+    ],
+    isChecked: false,
+  },
+  {
+    korean: "학생",
+    translation: "学生",
+    pronunciationEng: "haksaeng",
+    pronunciationJpn: "ハクセン",
+    examples: [
+      {
+        korean: "저는 학생입니다.",
+        translation: "私は学生です。",
+        pronunciationEng: "jeoneun haksaengimnida",
+        pronunciationJpn: "ジョヌン ハクセンインニダ",
+      },
+    ],
+    isChecked: false,
+  },
+  {
+    korean: "사람",
+    translation: "人",
+    pronunciationEng: "saram",
+    pronunciationJpn: "サラム",
+    examples: [
+      {
+        korean: "이 공원에는 많은 사람들이 있어요.",
+        translation: "この公園には多くの人がいます。",
+        pronunciationEng: "i gong-woneun manheun saramdeuri isseoyo",
+        pronunciationJpn: "イ ゴンウォヌン マヌン サラムドゥリ イッソヨ",
+      },
+      {
+        korean: "이곳에는 사람이 많아요.",
+        translation: "ここにはたくさんの人がいます。",
+        pronunciationEng: "igoseneun saram-i manh-ayo",
+        pronunciationJpn: "イゴセヌン サラミ マンハヨ",
+      },
+    ],
+    isChecked: false,
+  },
+  {
+    korean: "의사",
+    translation: "医者",
+    pronunciationEng: "uisa",
+    pronunciationJpn: "ウィサ",
+    examples: [
+      {
+        korean: "제 친구는 의사입니다.",
+        translation: "私の友達は医者です。",
+        pronunciationEng: "je chinguneun uisaimnida",
+        pronunciationJpn: "ジェ チングヌン ウィサインニダ",
+      },
+    ],
+    isChecked: false,
+  },
+  {
+    korean: "식당",
+    translation: "レストラン",
+    pronunciationEng: "siktang",
+    pronunciationJpn: "シクタン",
+    examples: [
+      {
+        korean: "오늘 저녁에 식당에 가요.",
+        translation: "今晩はレストランに行きます。",
+        pronunciationEng: "oneul jeonyeok-e siktang-e gayo",
+        pronunciationJpn: "オヌル ジョニョケ シクタンエ カヨ",
+      },
+    ],
+    isChecked: false,
+  },
+  {
+    korean: "국가",
+    translation: "国家",
+    pronunciationEng: "gukga",
+    pronunciationJpn: "クッカ",
+    examples: [
+      {
+        korean: "한국은 민주주의 국가입니다.",
+        translation: "韓国は民主主義国家です。",
+        pronunciationEng: "hangugeun minjujuui gukgaimnida",
+        pronunciationJpn: "ハングギュン ミンジュジュイ クッカインニダ",
+      },
+    ],
     isChecked: false,
   },
 ];
@@ -209,7 +321,7 @@ function App() {
               <th>Translation (with Japanese)</th>
               <th>Pronunciation (English)</th>
               <th>Pronunciation (Japanese Katakana)</th>
-              <th>Example Sentence</th>
+              <th>examples S[entence</th>
               <th>Done</th>
             </tr>
           </thead>
@@ -222,13 +334,18 @@ function App() {
                 <td>{item.pronunciationEng}</td>
                 <td>{item.pronunciationJpn}</td>
                 <td>
-                  <p>{item.example.korean}</p>
-                  <p>
-                    <em>{item.example.pronunciationEng}</em>
-                  </p>
-                  <p>
-                    <em>{item.example.pronunciationJpn}</em>
-                  </p>
+                  {item.examples.map((example, index) => (
+                    <div className="Example-wrapper">
+                      <p key={index}>{example.korean}</p>
+                      <p>{example.translation}</p>
+                      <p>
+                        <em>{example.pronunciationEng}</em>
+                      </p>
+                      <p>
+                        <em>{example.pronunciationJpn}</em>
+                      </p>
+                    </div>
+                  ))}
                 </td>
                 <td>
                   <input

@@ -99,3 +99,6 @@ input[type="checkbox"]::before {
 input[type="checkbox"]:checked::before {
   visibility: visible;
 }
+.Example-wrapper:not(:last-of-type) {
+  border-bottom: 1px solid #ccc;
+}

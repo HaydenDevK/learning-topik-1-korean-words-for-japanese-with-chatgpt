@@ -210,7 +210,7 @@ function App() {
               <th>Pronunciation (English)</th>
               <th>Pronunciation (Japanese Katakana)</th>
               <th>Example Sentence</th>
-              <th>Selection</th>
+              <th>Done</th>
             </tr>
           </thead>
           <tbody>
